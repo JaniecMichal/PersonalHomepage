@@ -18,7 +18,7 @@ export const theme = {
     white:"#FFFFFF",
     whiteLilac:"#FBFBFE",
     mercury:"#E5E5E5",
-    dodgerBlue:"2188FF",
+    dodgerBlue:"#2188FF",
     scienceBlue:"#0366D6",
     slateGray:"#6E7E91",
     mineShaft:"#252525",
