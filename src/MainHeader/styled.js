@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import me from "./images/Me.png";
+import me from "./images/Me.jpg";
 
 export const StyledHeader = styled.header`
   max-width:1089px;
@@ -16,7 +16,8 @@ export const MyPhoto = styled.div`
   border-radius:50%;
   background-image:url(${me});
   background-position:center;
-  object-fit:cover;
+  background-repeat:no-repeat;
+  background-size:cover;
 `;
 
 export const About = styled.div`
