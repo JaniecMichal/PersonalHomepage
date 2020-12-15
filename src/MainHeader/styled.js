@@ -2,10 +2,10 @@ import styled from "styled-components";
 import me from "./images/Me.jpg";
 
 export const StyledHeader = styled.header`
-  max-width:1089px;
+  width:100%;
   display:flex;
   flex-flow: row wrap;
-  justify-content:space-between;
+  justify-content:flex-start;
   align-items:center;
 `;
 
@@ -13,6 +13,7 @@ export const MyPhoto = styled.div`
   width:384px;
   height:384px;
   padding:8px;
+  margin-right:66px;
   border-radius:50%;
   background-image:url(${me});
   background-position:center;
