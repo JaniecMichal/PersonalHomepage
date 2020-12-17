@@ -37,7 +37,7 @@ export const Skills = styled.ul`
   font-size: ${({ theme }) => theme.fontSize.normal};
   color:${({ theme }) => theme.color.slateGray};
   display:grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3,auto);
   line-height:1.4;
  
 `
