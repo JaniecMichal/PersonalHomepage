@@ -7,6 +7,10 @@ export const StyledSection = styled.section`
   padding:32px;
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
   border-radius: 4px;
+
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    margin-top:64px;
+  }
 `;
 
 export const SectionHeader = styled.header`
@@ -24,12 +28,21 @@ export const SectionHeaderTitle = styled.h2`
   font-weight: ${({ theme }) => theme.fontWeight.black};
   font-size: ${({ theme }) => theme.fontSize.xxlarge};
   line-height: 36px;
+
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    font-size: ${({ theme }) => theme.fontSize.normal};
+  }
 `;
 
 export const StyledImage = styled.img`
   width:30px;
   height:30px;
   margin-bottom:13px;
+
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    width:18px;
+    height:18px;
+  }
 `;
 
 export const Skills = styled.ul`
@@ -40,6 +53,17 @@ export const Skills = styled.ul`
   grid-template-columns: repeat(3,auto);
   line-height:1.4;
   list-style:none;
+
+  
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    grid-template-columns: repeat(2,auto);
+    line-height:1.6 ;
+  }
+
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    grid-template-columns: repeat(1,auto);
+    font-size: ${({ theme }) => theme.fontSize.regular};
+  }
  
 `
 export const Skill = styled.li`
