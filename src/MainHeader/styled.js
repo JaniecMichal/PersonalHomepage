@@ -2,18 +2,29 @@ import styled from "styled-components";
 import me from "./images/Me.jpg";
 
 export const StyledHeader = styled.header`
-  width:100%;
-  display:flex;
-  flex-flow: row wrap;
-  justify-content:flex-start;
+  max-width:100%;
+  display:grid;
+  grid-template-columns: minmax(100px, 384px) 2fr;
+  grid-template-rows:minmax(100px, 384px);
+  grid-gap:66px;
   align-items:center;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2,minmax(100px,auto));
+    align-items:start;
+    grid-gap:50px;
+    padding:10px;
+
+    @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+      grid-template-columns: auto;
+      grid-template-rows: repeat(2,auto);
+  }
+  }
 `;
 
 export const MyPhoto = styled.div`
-  width:384px;
-  height:384px;
-  padding:8px;
-  margin-right:66px;
+  padding-top:100%;
   border-radius:50%;
   background-image:url(${me});
   background-position:center;
@@ -22,7 +33,6 @@ export const MyPhoto = styled.div`
 `;
 
 export const About = styled.div`
-  flex-basis:633px;
   display:flex;
   flex-direction:column;
   justify-content:space-evenly;
@@ -42,6 +52,10 @@ export const HeaderTitle = styled.h1`
   color:${({ theme }) => theme.color.mineShaft};
   margin-top:0px;
   margin-bottom:35px;
+
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    font-size:${({ theme }) => theme.fontSize.large};
+  }
 `;
 
 export const MyDescription = styled.p`
@@ -51,4 +65,8 @@ export const MyDescription = styled.p`
   margin-top:0px;
   margin-bottom:32px;
   line-height: 1.4;
+
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    font-size:${({ theme }) => theme.fontSize.normal};
+  }
 `;
