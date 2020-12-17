@@ -6,10 +6,12 @@ import skillset from "./skillset";
 import skillsToLearn from "./skillsToLearn";
 import tools from "./images/tools.svg";
 import rocket from "./images/rocket.svg";
+import ButtonWraper from "./ButtonWraper";
 
 function App() {
   return (
     <Container>
+      <ButtonWraper />
       <MainHeader />
       <Section
         sectionTitle={"My skillset includes"}
