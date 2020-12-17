@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionHeader, SectionHeaderTitle, Skill, Skills, StyledImage, StyledSection } from "./styled";
+import { SectionHeader, SectionHeaderTitle, Skill, Skills, StyledImage, StyledSection, Circle } from "./styled";
 
 
 const Section = ({ sectionTitle, sectionIcon, sectionList }) => {
@@ -13,7 +13,8 @@ const Section = ({ sectionTitle, sectionIcon, sectionList }) => {
           {
             !!sectionList && (
               sectionList.map(listItem =>
-                <Skill key={listItem}>{listItem}</Skill>)
+                  <Skill key={listItem}><Circle />{listItem}</Skill>
+              )
             )
           }
         </Skills>

@@ -39,8 +39,21 @@ export const Skills = styled.ul`
   display:grid;
   grid-template-columns: repeat(3,auto);
   line-height:1.4;
+  list-style:none;
  
 `
 export const Skill = styled.li`
-
+  display:flex;
+  align-items:center;
+  flex-wrap:nowrap;
+  justify-content:flex-start;
 `;
+
+export const Circle = styled.div`
+  width:9px;
+  height:9px;
+  border-radius:4.5px;
+  background-color:${({ theme }) => theme.color.scienceBlue};
+  margin-right:16px;
+`;
+
