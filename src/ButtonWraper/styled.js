@@ -8,6 +8,7 @@ export const StyledButtonWrapper = styled.div`
   flex-flow: row wrap;
   justify-content:flex-end;
   align-items:center;
+  margin-bottom:50px;
 `;
 
 export const ModeText = styled.span`
@@ -16,6 +17,10 @@ export const ModeText = styled.span`
   font-weight:${({ theme }) => theme.fontWeight.bold};
   text-transform:uppercase;
   margin-right:12px;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    display:none;
+  }
 `;
 
 export const ButtonBackground = styled.div`
