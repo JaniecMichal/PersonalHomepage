@@ -8,6 +8,7 @@ import tools from "./images/tools.svg";
 import rocket from "./images/rocket.svg";
 import ButtonWraper from "./ButtonWraper";
 import Portfolio from "./Portfolio";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         sectionList={skillsToLearn}
       />
       <Portfolio />
+      <Footer />
     </Container>
   );
 }
