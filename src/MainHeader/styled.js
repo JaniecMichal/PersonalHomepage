@@ -14,13 +14,13 @@ export const StyledHeader = styled.header`
     grid-template-rows: repeat(2,minmax(100px,auto));
     align-items:start;
     grid-gap:50px;
-    padding:10px;
+  }
 
-    @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
-      grid-template-columns: auto;
-      grid-template-rows: repeat(2,auto);
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2,auto);
   }
-  }
+ 
 `;
 
 export const MyPhoto = styled.div`
@@ -41,6 +41,7 @@ export const About = styled.div`
 
 export const Caption = styled.span`
   font-size:${({ theme }) => theme.fontSize.small};
+  font-weight:${({ theme }) => theme.fontWeight.bold};
   color:${({ theme }) => theme.color.slateGray};
   margin-bottom:12px;
   text-transform:uppercase;
