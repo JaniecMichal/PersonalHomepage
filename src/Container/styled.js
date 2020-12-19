@@ -7,4 +7,8 @@ export const StyledContainer = styled.main`
   display:flex;
   flex-direction:column;
   justify-content:center;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    padding:10px;
+  }
 `
