@@ -11,7 +11,8 @@ import Portfolio from "./Portfolio";
 import Footer from "./Footer";
 
 function App() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   return (
     <Container>
@@ -27,7 +28,7 @@ function App() {
         sectionIcon={rocket}
         sectionList={skillsToLearn}
       />
-      <Portfolio loading={loading} />
+      <Portfolio loading={loading} error={error} />
       <Footer />
     </Container>
   );
