@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "./Container";
 import MainHeader from "./MainHeader";
 import Section from "./Section";
@@ -11,6 +11,8 @@ import Portfolio from "./Portfolio";
 import Footer from "./Footer";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <Container>
       <ButtonWraper />
@@ -25,7 +27,7 @@ function App() {
         sectionIcon={rocket}
         sectionList={skillsToLearn}
       />
-      <Portfolio />
+      <Portfolio loading={loading} />
       <Footer />
     </Container>
   );
