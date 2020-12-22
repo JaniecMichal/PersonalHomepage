@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledHeader, MyPhoto, About, Caption, HeaderTitle, MyDescription, } from "./styled";
-import { StyledButton, MessageIcon } from "./Button";
+import Button from "../Button";
 
 const MainHeader = () => (
   <StyledHeader>
@@ -13,7 +13,7 @@ const MainHeader = () => (
         I have decided to be <i>Frontend Developer</i> because creating web applications and amazing websites give me lots of satisfaction.
         I would like to use my skills to work with interesting and important projects.
       </MyDescription>
-      <StyledButton><MessageIcon />Hire Me</StyledButton>
+      <Button icon={true} buttonMessage={"Hire Me"}/>
     </About>
   </StyledHeader>
 );
