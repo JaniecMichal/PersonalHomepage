@@ -2,18 +2,18 @@ import React from "react";
 import { SectionHeader, SectionHeaderTitle, Skill, Skills, StyledImage, StyledSection, Circle } from "./styled";
 
 
-const Section = ({ sectionTitle, sectionIcon, sectionList }) => {
+const Section = ({ sectionTitle, sectionIcon, sectionList, darkMode }) => {
   return (
-    <StyledSection>
+    <StyledSection darkMode={darkMode}>
       <SectionHeader>
-        <SectionHeaderTitle>{sectionTitle}</SectionHeaderTitle><StyledImage src={sectionIcon} alt="tools" />
+        <SectionHeaderTitle darkMode={darkMode}>{sectionTitle}</SectionHeaderTitle><StyledImage src={sectionIcon} alt="tools" />
       </SectionHeader>
       <article>
-        <Skills>
+        <Skills darkMode={darkMode}>
           {
             !!sectionList && (
               sectionList.map(listItem =>
-                  <Skill key={listItem}><Circle />{listItem}</Skill>
+                <Skill key={listItem}><Circle />{listItem}</Skill>
               )
             )
           }

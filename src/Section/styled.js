@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledSection = styled.section`
   margin-top:72px;
@@ -8,9 +8,14 @@ export const StyledSection = styled.section`
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
   border-radius: 4px;
 
+  ${({ darkMode }) => darkMode && css`
+    background-color: ${({ theme }) => theme.color.lightShaft};
+  `};
+
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     margin-top:64px;
-  }
+  };
+
 `;
 
 export const SectionHeader = styled.header`
@@ -28,6 +33,10 @@ export const SectionHeaderTitle = styled.h2`
   font-weight: ${({ theme }) => theme.fontWeight.black};
   font-size: ${({ theme }) => theme.fontSize.xxlarge};
   line-height: 36px;
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size: ${({ theme }) => theme.fontSize.normal};
@@ -53,6 +62,10 @@ export const Skills = styled.ul`
   grid-template-columns: repeat(3,auto);
   line-height:1.4;
   list-style:none;
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
 
   
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
