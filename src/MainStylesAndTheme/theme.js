@@ -22,7 +22,8 @@ export const theme = {
     dodgerBlue:"#2188FF",
     scienceBlue:"#0366D6",
     slateGray:"#6E7E91",
-    mineShaft:"#252525",
+    lightShaft:"#363636",
+    mineShaft:"#252525"
   },
   media: {
     extraMobileSmall: "340px",
