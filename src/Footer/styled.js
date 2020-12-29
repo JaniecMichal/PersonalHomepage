@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledFooter = styled.footer`
   justify-self:start;
@@ -16,6 +16,10 @@ export const Caption = styled.span`
   margin-bottom:24px;
   text-transform:uppercase;
 
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
+
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     margin-bottom:12px;
   }
@@ -29,22 +33,44 @@ export const ContactLink = styled.a`
   margin-bottom:24px;
   text-decoration:none;
 
-  &:hover{
+   &:hover{
     color:${({ theme }) => theme.color.scienceBlue};
-  }
+    };
 
   &:visited{
     color:${({ theme }) => theme.color.mineShaft};
-  }
+  };
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+
+      &:hover{
+      color:${({ theme }) => theme.color.dodgerBlue};
+    };
+
+      &:visited{
+        color:${({ theme }) => theme.color.white};
+      };
+  `};
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    &:hover{
+     &:hover{
       color:${({ theme }) => theme.color.mineShaft};
     }
 
     &:visited{
       color:${({ theme }) => theme.color.mineShaft};
     }
+
+    ${({ darkMode }) => darkMode && css`
+      &:hover{
+      color:${({ theme }) => theme.color.white};
+    };
+
+      &:visited{
+        color:${({ theme }) => theme.color.white};
+      };
+  `};
   }
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
@@ -60,6 +86,10 @@ export const ContactMessage = styled.p`
   margin-top:0px;
   margin-bottom:56px;
   line-height: 1.4;
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size:${({ theme }) => theme.fontSize.regular};
@@ -84,14 +114,26 @@ export const SocialIcon = styled.img`
   height:48px;
 
     &:hover{
-      filter:invert(47%) sepia(58%) saturate(4738%) hue-rotate(198deg) brightness(102%) contrast(101%);
+      filter:invert(24%) sepia(97%) saturate(1539%) hue-rotate(195deg) brightness(108%) contrast(101%);
     }
+
+    ${({ darkMode }) => darkMode && css`
+      filter: invert(99%) sepia(100%) saturate(1%) hue-rotate(259deg) brightness(107%) contrast(100%);
+        &:hover{
+          filter:invert(43%) sepia(87%) saturate(3030%) hue-rotate(198deg) brightness(101%) contrast(101%);
+        }
+   `};
     
     @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
-      
       &:hover{
         filter:none;
       }
+
+        ${({ darkMode }) => darkMode && css`
+          &:hover{
+            filter:none;
+          }
+   `};
 
     }
 
