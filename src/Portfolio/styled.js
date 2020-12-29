@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledWrapper = styled.section`
   width:100%;
@@ -16,6 +16,10 @@ export const HeaderTitle = styled.h3`
   margin-top:12px;
   margin-bottom:8px;
 
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
+
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size:${({ theme }) => theme.fontSize.normal};
   }
@@ -26,6 +30,11 @@ export const SubTitle = styled.p`
   font-size:${({ theme }) => theme.fontSize.large};
   margin-top:0px;
   margin-bottom:24px;
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
+
 `;
 
 export const TileContainer = styled.section`

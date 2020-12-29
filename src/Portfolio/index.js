@@ -5,20 +5,20 @@ import ProjectTile from "./ProjectTile";
 import Spinner from "./Spinner";
 import { HeaderTitle, StyledWrapper, SubTitle, TileContainer } from "./styled";
 
-const Portfolio = ({ loading, error }) => {
+const Portfolio = ({ loading, error, darkMode }) => {
 
   const returnCorrectContent = () => {
     if (loading === true) {
-      return <Spinner />
+      return <Spinner darkMode={darkMode} />
     } else if (error === true) {
-      return <ConnectionError />
+      return <ConnectionError darkMode={darkMode} />
     } else {
       return (
         <TileContainer>
-          <ProjectTile />
-          <ProjectTile />
-          <ProjectTile />
-          <ProjectTile />
+          <ProjectTile darkMode={darkMode} />
+          <ProjectTile darkMode={darkMode} />
+          <ProjectTile darkMode={darkMode} />
+          <ProjectTile darkMode={darkMode} />
         </TileContainer>
       )
     }
@@ -28,8 +28,8 @@ const Portfolio = ({ loading, error }) => {
     <StyledWrapper>
       <header>
         <img src={Icon} alt="githubIcon" />
-        <HeaderTitle>Portfolio</HeaderTitle>
-        <SubTitle>My recent projects</SubTitle>
+        <HeaderTitle darkMode={darkMode}>Portfolio</HeaderTitle>
+        <SubTitle darkMode={darkMode}>My recent projects</SubTitle>
       </header>
       {returnCorrectContent()}
     </StyledWrapper>
