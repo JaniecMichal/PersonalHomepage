@@ -2,9 +2,9 @@ import React from "react";
 import spinner from "./images/spinner.svg";
 import { StyledWrapper, StyledSpinner, LoadingMessage } from "./styled";
 
-const Spinner = () => {
+const Spinner = ({ darkMode }) => {
   return <StyledWrapper>
-    <LoadingMessage>Please wait, project are being loading…</LoadingMessage>
+    <LoadingMessage darkMode={darkMode}>Please wait, project are being loading…</LoadingMessage>
     <StyledSpinner src={spinner} alt="loading" />
   </StyledWrapper>;
 };

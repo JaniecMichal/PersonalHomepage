@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const StyledWrapper = styled.div`
   margin-top:64px;
@@ -14,6 +14,10 @@ export const LoadingMessage = styled.p`
   font-weight:${({ theme }) => theme.fontWeight.normal};
   font-size:${({ theme }) => theme.fontSize.large};
   color:${({ theme }) => theme.color.mineShaft};
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     margin-bottom:24px;
