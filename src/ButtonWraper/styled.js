@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import url from "./images/toggle.svg";
+import styled, { css } from "styled-components";
+import lightIcon from "./images/toggle.svg";
+import darkIcon from "./images/toggleDM.svg";
 
 export const StyledButtonWrapper = styled.div`
   justify-self:end;
@@ -18,6 +19,10 @@ export const ModeText = styled.span`
   text-transform:uppercase;
   margin-right:12px;
 
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
+
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     display:none;
   }
@@ -27,6 +32,11 @@ export const ButtonBackground = styled.div`
   border: 1px solid rgba(209, 213, 218, 0.3);
   border-radius:13px;
   background-color:${({ theme }) => theme.color.mercury};
+
+  ${({ darkMode }) => darkMode && css`
+    background-color: ${({ theme }) => theme.color.lightShaft};
+    border: 1px solid ${({ theme }) => theme.color.white};
+  `};
 `;
 
 export const StyledButton = styled.button`
@@ -41,15 +51,27 @@ export const StyledButton = styled.button`
   align-items: center;
   overflow: hidden;
   cursor: pointer;
+
+  ${({ darkMode }) => darkMode && css`
+    background-color: ${({ theme }) => theme.color.lightShaft};
+    border:none;
+  `};
 `;
 
-export const LightMode = styled.div`
+export const Icon = styled.div`
   width: 20px;
   height: 20px;
   border-radius: 10px;
-  background-image: url(${url});
+  background-image: url(${lightIcon});
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px 14px;
   background-color: ${({ theme }) => theme.color.slateGray};
+
+  ${({ darkMode }) => darkMode && css`
+    background-image: url(${darkIcon});
+    background-color: ${({ theme }) => theme.color.white};
+    transition: all 0.1s linear;
+    transform: translate(25px);
+  `};
 `;
