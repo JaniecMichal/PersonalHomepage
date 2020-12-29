@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 import { normalize } from 'styled-normalize';
 
 export const GlobalStyle = createGlobalStyle`
@@ -14,5 +14,9 @@ export const GlobalStyle = createGlobalStyle`
       body {
         background-color: ${({ theme }) => theme.color.whiteLilac};
         font-family: 'Inter', sans-serif;
+
+        ${({ darkMode }) => darkMode && css`
+          background-color: ${({ theme }) => theme.color.mineShaft};
+    `};
     }
 `;
