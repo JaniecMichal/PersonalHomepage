@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import me from "./images/Me.jpg";
 
 export const StyledHeader = styled.header`
@@ -45,6 +45,10 @@ export const Caption = styled.span`
   color:${({ theme }) => theme.color.slateGray};
   margin-bottom:12px;
   text-transform:uppercase;
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
 `;
 
 export const HeaderTitle = styled.h1`
@@ -53,6 +57,10 @@ export const HeaderTitle = styled.h1`
   color:${({ theme }) => theme.color.mineShaft};
   margin-top:0px;
   margin-bottom:35px;
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size:${({ theme }) => theme.fontSize.large};
@@ -66,6 +74,10 @@ export const MyDescription = styled.p`
   margin-top:0px;
   margin-bottom:32px;
   line-height: 1.4;
+
+  ${({ darkMode }) => darkMode && css`
+    color:${({ theme }) => theme.color.white};
+  `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size:${({ theme }) => theme.fontSize.normal};
