@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ThemeProvider } from "styled-components";
 import Container from "./Container";
 import MainHeader from "./MainHeader";
 import Section from "./Section";
@@ -9,28 +10,42 @@ import rocket from "./images/rocket.svg";
 import ButtonWraper from "./ButtonWraper";
 import Portfolio from "./Portfolio";
 import Footer from "./Footer";
+import { GlobalStyle } from "./MainStylesAndTheme/GlobalStyle";
+import { theme } from "./MainStylesAndTheme/theme.js";
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <Container>
-      <ButtonWraper />
-      <MainHeader />
-      <Section
-        sectionTitle={"My skillset includes"}
-        sectionIcon={tools}
-        sectionList={skillset}
-      />
-      <Section
-        sectionTitle={"What I want to learn next"}
-        sectionIcon={rocket}
-        sectionList={skillsToLearn}
-      />
-      <Portfolio loading={loading} error={error} />
-      <Footer />
-    </Container>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyle darkMode={darkMode} />
+        <Container>
+          <ButtonWraper darkMode={darkMode} modeToggler={setDarkMode} />
+          <MainHeader darkMode={darkMode} />
+          <Section
+            sectionTitle={"My skillset includes"}
+            sectionIcon={tools}
+            sectionList={skillset}
+            darkMode={darkMode}
+          />
+          <Section
+            sectionTitle={"What I want to learn next"}
+            sectionIcon={rocket}
+            sectionList={skillsToLearn}
+            darkMode={darkMode}
+          />
+          <Portfolio
+            loading={loading}
+            error={error}
+            darkMode={darkMode}
+          />
+          <Footer darkMode={darkMode} />
+        </Container>
+      </>
+    </ThemeProvider>
   );
 }
 
