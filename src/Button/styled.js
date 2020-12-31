@@ -57,6 +57,7 @@ export const StyledButton = styled.button`
    }
 
    ${({ darkMode }) => darkMode && css`
+    background-color:${({ theme }) => theme.color.dodgerBlue};
       &:hover{
         cursor: default;
         background-color:${({ theme }) => theme.color.dodgerBlue};
