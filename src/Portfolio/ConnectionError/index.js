@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../Button";
 import danger from "./images/Danger.svg";
-import { StyledWrapper, ErrorMessage, ErrorTip, StyledImg } from "./styled.js";
+import { StyledWrapper, ErrorMessage, ErrorTip, StyledImg, StyledLink } from "./styled.js";
 
 const ConnectionError = ({ darkMode }) => (
   <StyledWrapper>
@@ -11,7 +11,13 @@ const ConnectionError = ({ darkMode }) => (
     <ErrorTip darkMode={darkMode}>Sorry, failed to load Github projects.
     You can check them directly on Github.
     </ErrorTip>
-    <Button buttonMessage={"Go to Github"} darkMode={darkMode} />
+    <StyledLink
+      href="https://github.com/JaniecMichal"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      <Button buttonMessage={"Go to Github"} darkMode={darkMode} />
+    </StyledLink>
   </StyledWrapper>
 );
 

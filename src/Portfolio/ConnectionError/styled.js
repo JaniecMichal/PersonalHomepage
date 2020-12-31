@@ -50,3 +50,11 @@ export const StyledImg = styled.img`
     filter: invert(99%) sepia(100%) saturate(1%) hue-rotate(259deg) brightness(107%) contrast(100%);
   `};
 `;
+
+export const StyledLink = styled.a`
+  text-decoration:none;
+
+  &:visited{
+    color:${({ theme }) => theme.color.white};
+  }
+`;
