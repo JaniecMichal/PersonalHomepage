@@ -12,11 +12,11 @@ import Portfolio from "./Portfolio";
 import Footer from "./Footer";
 import { GlobalStyle } from "./MainStylesAndTheme/GlobalStyle";
 import { theme } from "./MainStylesAndTheme/theme.js";
+import { useApiData } from "./useApiData";
 
 function App() {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const appState = useApiData();
 
   return (
     <ThemeProvider theme={theme}>
@@ -38,9 +38,10 @@ function App() {
             darkMode={darkMode}
           />
           <Portfolio
-            loading={loading}
-            error={error}
+            loading={appState.loading}
+            error={appState.error}
             darkMode={darkMode}
+            repositories={appState.repositories}
           />
           <Footer darkMode={darkMode} />
         </Container>
