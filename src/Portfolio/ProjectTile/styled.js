@@ -92,6 +92,8 @@ export const StyledLink = styled.a`
   font-size:${({ theme }) => theme.fontSize.normal};
   color:${({ theme }) => theme.color.scienceBlue};
   text-decoration:none;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
   &:focus{
     color:${({ theme }) => theme.color.dodgerBlue};
