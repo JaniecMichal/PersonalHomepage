@@ -5,8 +5,7 @@ import ProjectTile from "./ProjectTile";
 import Spinner from "./Spinner";
 import { HeaderTitle, StyledWrapper, SubTitle, TileContainer } from "./styled";
 
-const Portfolio = ({ loading, error, darkMode }) => {
-
+const Portfolio = ({ loading, error, darkMode, repositories }) => {
   const returnCorrectContent = () => {
     if (loading === true) {
       return <Spinner darkMode={darkMode} />
@@ -15,10 +14,18 @@ const Portfolio = ({ loading, error, darkMode }) => {
     } else {
       return (
         <TileContainer>
-          <ProjectTile darkMode={darkMode} />
-          <ProjectTile darkMode={darkMode} />
-          <ProjectTile darkMode={darkMode} />
-          <ProjectTile darkMode={darkMode} />
+          {
+            !!repositories && repositories.filter(({ name }) => name !== "JaniecMichal").map(repository =>
+              <ProjectTile
+                darkMode={darkMode}
+                key={repository.id}
+                title={repository.name}
+                description={repository.description}
+                demoLink={repository.homepage}
+                codeLink={repository.html_url}
+              />
+            )
+          }
         </TileContainer>
       )
     }
