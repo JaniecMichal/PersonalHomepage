@@ -8,37 +8,38 @@ import {
   TileTitle,
 } from "./styled";
 
-const ProjectTile = ({ darkMode }) => {
+const ProjectTile = ({ darkMode, title, description, demoLink, codeLink }) => {
   return (
     <StyledTile darkMode={darkMode} >
       <TileTitle darkMode={darkMode}>
-        Movie Browser
+        {title}
       </TileTitle>
       <TileDescription darkMode={darkMode}>
-        Project description, e.g. website where you can search for favourite movies and people.
-        Project description, e.g. website where you can search.
+        {description}
       </TileDescription>
-      <LinkContainer>
-        <LinkCaption darkMode={darkMode}>Demo:</LinkCaption>
-        <StyledLink
-          href="https://link.demo.com"
-          target="_blank"
-          rel="noreferrer noopener"
-          darkMode={darkMode}
-        >
-          https://link.demo.com
-       </StyledLink>
-      </LinkContainer>
+      {!!demoLink &&
+        <LinkContainer>
+         <LinkCaption darkMode={darkMode}>Demo:</LinkCaption>
+          <StyledLink
+            href={demoLink}
+            target="_blank"
+            rel="noreferrer noopener"
+            darkMode={darkMode}
+          >
+            {demoLink}
+          </StyledLink>
+        </LinkContainer>
+      }
       <LinkContainer>
         <LinkCaption darkMode={darkMode}>Code:</LinkCaption>
         <StyledLink
-          href="https://link.demo.com"
+          href={codeLink}
           target="_blank"
           rel="noreferrer noopener"
           darkMode={darkMode}
         >
-          https://link.demo.com
-       </StyledLink>
+          {codeLink}
+        </StyledLink>
       </LinkContainer>
     </StyledTile>
   )
