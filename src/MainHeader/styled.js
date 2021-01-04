@@ -83,3 +83,11 @@ export const MyDescription = styled.p`
     font-size:${({ theme }) => theme.fontSize.normal};
   }
 `;
+
+export const ContactLink = styled.a`
+text-decoration: none;
+
+  &:visited{
+  color: ${({ theme }) => theme.color.white};
+}
+`;

@@ -1,8 +1,8 @@
 import React from "react";
-import { StyledHeader, MyPhoto, About, Caption, HeaderTitle, MyDescription, } from "./styled";
+import { StyledHeader, MyPhoto, About, Caption, HeaderTitle, MyDescription, ContactLink } from "./styled";
 import Button from "../Button";
 
-const MainHeader = ({darkMode}) => (
+const MainHeader = ({ darkMode }) => (
   <StyledHeader>
     <MyPhoto />
     <About>
@@ -13,7 +13,14 @@ const MainHeader = ({darkMode}) => (
         I have decided to be <i>Frontend Developer</i> because creating web applications and amazing websites give me lots of satisfaction.
         I would like to use my skills to work with interesting and important projects.
       </MyDescription>
-      <Button icon={true} buttonMessage={"Hire Me"} darkMode={darkMode}/>
+      <ContactLink
+        darkMode={darkMode}
+        href="mailto:michal.janiec95@gmail.com"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
+        <Button icon={true} buttonMessage={"Hire Me"} darkMode={darkMode} />
+      </ContactLink>
     </About>
   </StyledHeader>
 );
