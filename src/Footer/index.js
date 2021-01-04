@@ -10,7 +10,7 @@ const Footer = ({ darkMode }) => (
     <Caption darkMode={darkMode} >Let's talk!</Caption>
     <ContactLink
       darkMode={darkMode}
-      href="michal.janiec95@gmail.com"
+      href="mailto:michal.janiec95@gmail.com"
       target="_blank"
       rel="noreferrer noopener"
     >
