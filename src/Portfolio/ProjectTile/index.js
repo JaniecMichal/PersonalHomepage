@@ -26,7 +26,7 @@ const ProjectTile = ({ darkMode, title, description, demoLink, codeLink }) => {
             rel="noreferrer noopener"
             darkMode={darkMode}
           >
-            {demoLink}
+            See live version
           </StyledLink>
         </LinkContainer>
       }
@@ -38,7 +38,7 @@ const ProjectTile = ({ darkMode, title, description, demoLink, codeLink }) => {
           rel="noreferrer noopener"
           darkMode={darkMode}
         >
-          {codeLink}
+          See source code
         </StyledLink>
       </LinkContainer>
     </StyledTile>

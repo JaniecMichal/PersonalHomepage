@@ -69,10 +69,12 @@ export const TileDescription = styled.p`
 
 export const LinkContainer = styled.div`
   margin-bottom:8px;
+  display:grid;
+  grid-template-columns: 55px 145px;
+  grid-gap:8px;
 `;
 
 export const LinkCaption = styled.span`
-  margin-right:8px;
   font-weight:${({ theme }) => theme.fontWeight.normal};
   font-size:${({ theme }) => theme.fontSize.normal};
   color:${({ theme }) => theme.color.slateGray};
