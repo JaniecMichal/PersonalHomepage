@@ -13,14 +13,6 @@ export const StyledTile = styled.article`
     border: 6px solid rgba(3, 102, 214, 0.2);
   }
 
-  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
-    padding:24px;
-
-    &:hover{
-    border: 6px solid rgba(209, 213, 218, 0.3);
-    }
-  }
-
   ${({ darkMode }) => darkMode && css`
     background-color: ${({ theme }) => theme.color.lightShaft};
     box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02), 0px 16px 58px rgba(9, 10, 51, 0.03);
@@ -29,8 +21,21 @@ export const StyledTile = styled.article`
       &:hover{
         border: 6px solid rgba(3, 102, 214, 0.5);
       }
-
   `};
+
+  @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
+    padding:24px;
+
+    &:hover{
+    border: 6px solid rgba(209, 213, 218, 0.3);
+    };
+
+    ${({ darkMode }) => darkMode && css`
+      &:hover{
+        border: 6px solid rgba(209, 213, 218, 0.1);
+      }
+  `};
+  }
 `;
 
 export const TileTitle = styled.header`
