@@ -40,7 +40,7 @@ export const SubTitle = styled.p`
 export const TileContainer = styled.section`
   width:100%;
   display:grid;
-  grid-template-columns:repeat(2,auto);
+  grid-template-columns:repeat(2,1fr);
   justify-items:center;
   grid-gap:32px;
 
