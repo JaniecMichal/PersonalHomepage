@@ -51,7 +51,7 @@ const Footer = ({ darkMode }) => (
         <SocialIcon src={inIcon} alt="instagramIcon" darkMode={darkMode} />
       </a>
       <a
-        href="www.linkedin.com/in/JaniecMichal"
+        href="https://www.linkedin.com/in/JaniecMichal"
         target="_blank"
         rel="noreferrer noopener"
       >
