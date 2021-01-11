@@ -1,5 +1,13 @@
 import React from "react";
-import { StyledHeader, MyPhoto, About, Caption, HeaderTitle, MyDescription, ContactLink } from "./styled";
+import {
+  StyledHeader,
+  MyPhoto,
+  About,
+  Caption,
+  HeaderTitle,
+  MyDescription,
+  ContactLink,
+} from "./styled";
 import Button from "../Button";
 
 const MainHeader = ({ darkMode }) => (
@@ -9,9 +17,11 @@ const MainHeader = ({ darkMode }) => (
       <Caption darkMode={darkMode}>This is</Caption>
       <HeaderTitle darkMode={darkMode}>Michał Janiec</HeaderTitle>
       <MyDescription darkMode={darkMode}>
-        👨‍🎓💻🖥 I love work which require <strong>analytical thinking</strong> and looking for<strong> the best solutions</strong>.
-        I have decided to be <i>Frontend Developer</i> because creating web applications and amazing websites give me lots of satisfaction.
-        I would like to use my skills to work with interesting and important projects.
+        👨‍🎓💻🖥 I love work that requires <strong>analytical thinking</strong> and
+        looking for <strong>the best solutions</strong>. I have decided to be a
+        <i>Frontend Developer</i> because creating web applications and amazing
+        websites gives me lots of satisfaction. I would like to use my skills to
+        work on interesting and important projects.
       </MyDescription>
       <ContactLink
         darkMode={darkMode}
