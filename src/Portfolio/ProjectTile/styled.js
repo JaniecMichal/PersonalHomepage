@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledTile = styled.article`
-  max-width: 592px;
+  width: 100%;
   background-color: ${({ theme }) => theme.color.white};
   border: 6px solid rgba(209, 213, 218, 0.3);
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
