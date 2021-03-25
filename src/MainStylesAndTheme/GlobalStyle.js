@@ -1,5 +1,5 @@
 import { createGlobalStyle, css } from "styled-components";
-import { normalize } from 'styled-normalize';
+import { normalize } from "styled-normalize";
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -12,11 +12,9 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: inherit;
     } 
       body {
-        background-color: ${({ theme }) => theme.color.whiteLilac};
+        background-color: ${({ theme }) => theme.colors.body.background};
+        color: ${({ theme }) => theme.colors.body.text};
         font-family: 'Inter', sans-serif;
-
-        ${({ darkMode }) => darkMode && css`
-          background-color: ${({ theme }) => theme.color.mineShaft};
-    `};
+        transition: background-color 0.6s;
     }
 `;
