@@ -1,5 +1,12 @@
 import React from "react";
-import { StyledButtonWrapper, ModeText, ButtonBackground, StyledButton, Icon } from "./styled";
+import {
+  StyledButtonWrapper,
+  ModeText,
+  ButtonBackground,
+  StyledButton,
+  Icon,
+  IconWrapper,
+} from "./styled";
 
 const ButtonWraper = ({ darkMode, modeToggler }) => {
   const setMode = () => {
@@ -8,14 +15,16 @@ const ButtonWraper = ({ darkMode, modeToggler }) => {
 
   return (
     <StyledButtonWrapper>
-      <ModeText darkMode={darkMode}>Dark mode Off</ModeText>
-      <ButtonBackground darkMode={darkMode}>
-        <StyledButton darkMode={darkMode} onClick={setMode}>
-          <Icon darkMode={darkMode} />
-        </StyledButton>
-      </ButtonBackground>
+      <StyledButton darkMode={darkMode} onClick={setMode}>
+        <ModeText darkMode={darkMode}>Dark mode Off</ModeText>
+        <ButtonBackground>
+          <IconWrapper darkMode={darkMode}>
+            <Icon darkMode={darkMode} />
+          </IconWrapper>
+        </ButtonBackground>
+      </StyledButton>
     </StyledButtonWrapper>
-  )
+  );
 };
 
 export default ButtonWraper;
