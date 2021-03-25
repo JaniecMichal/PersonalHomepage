@@ -19,7 +19,7 @@ const MainHeader = ({ darkMode }) => (
       <MyDescription darkMode={darkMode}>
         👨‍🎓💻🖥 I love work that requires <strong>analytical thinking</strong> and
         looking for <strong>the best solutions</strong>. I have decided to be a
-        <i>Frontend Developer</i> because creating web applications and amazing
+        <i> Frontend Developer</i> because creating web applications and amazing
         websites gives me lots of satisfaction. I would like to use my skills to
         work on interesting and important projects.
       </MyDescription>
