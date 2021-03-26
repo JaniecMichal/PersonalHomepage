@@ -28,7 +28,7 @@ export const ModeText = styled.span`
   }
 `;
 
-export const ButtonBackground = styled.div`
+export const ButtonBackground = styled.span`
   width: 48px;
   background: ${({ theme }) => theme.colors.themeSwitch.background};
   border: 1px solid;
@@ -37,7 +37,7 @@ export const ButtonBackground = styled.div`
   display: flex;
 `;
 
-export const IconWrapper = styled.div`
+export const IconWrapper = styled.span`
   background: currentColor;
   padding: 3px;
   border-radius: 50%;
