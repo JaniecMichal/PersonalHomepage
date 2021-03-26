@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const StyledTile = styled.article`
   width: 100%;
-  background-color: ${({ theme }) => theme.color.white};
+  background-color: ${({ theme }) => theme.colors.sectionBackground};
   border: 6px solid rgba(209, 213, 218, 0.3);
   box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
     0px 16px 58px rgba(9, 10, 51, 0.03);
@@ -17,7 +17,6 @@ export const StyledTile = styled.article`
   ${({ darkMode }) =>
     darkMode &&
     css`
-      background-color: ${({ theme }) => theme.color.lightShaft};
       box-shadow: 0px -2px 50px rgba(9, 10, 51, 0.02),
         0px 16px 58px rgba(9, 10, 51, 0.03);
       border: 6px solid rgba(209, 213, 218, 0.1);
@@ -48,13 +47,7 @@ export const TileTitle = styled.header`
   margin-bottom: 24px;
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   font-size: ${({ theme }) => theme.fontSize.xlarge};
-  color: ${({ theme }) => theme.color.scienceBlue};
-
-  ${({ darkMode }) =>
-    darkMode &&
-    css`
-      color: ${({ theme }) => theme.color.white};
-    `};
+  color: ${({ theme }) => theme.colors.primary};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size: ${({ theme }) => theme.fontSize.regular};
@@ -68,13 +61,6 @@ export const TileDescription = styled.p`
   line-height: 1.4;
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   font-size: ${({ theme }) => theme.fontSize.normal};
-  color: ${({ theme }) => theme.color.slateGray};
-
-  ${({ darkMode }) =>
-    darkMode &&
-    css`
-      color: ${({ theme }) => theme.color.white};
-    `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size: ${({ theme }) => theme.fontSize.regular};
@@ -92,13 +78,6 @@ export const LinkContainer = styled.div`
 export const LinkCaption = styled.span`
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   font-size: ${({ theme }) => theme.fontSize.normal};
-  color: ${({ theme }) => theme.color.slateGray};
-
-  ${({ darkMode }) =>
-    darkMode &&
-    css`
-      color: ${({ theme }) => theme.color.white};
-    `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size: ${({ theme }) => theme.fontSize.regular};
@@ -108,38 +87,12 @@ export const LinkCaption = styled.span`
 export const StyledLink = styled.a`
   font-weight: ${({ theme }) => theme.fontWeight.normal};
   font-size: ${({ theme }) => theme.fontSize.normal};
-  color: ${({ theme }) => theme.color.scienceBlue};
+  color: ${({ theme }) => theme.colors.primary};
   text-decoration: underline;
   overflow-wrap: break-word;
   word-wrap: break-word;
 
-  &:focus {
-    color: ${({ theme }) => theme.color.dodgerBlue};
-  }
-
-  ${({ darkMode }) =>
-    darkMode &&
-    css`
-      color: ${({ theme }) => theme.color.dodgerBlue};
-
-      &:focus {
-        color: ${({ theme }) => theme.color.scienceBlue};
-      }
-    `};
-
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     font-size: ${({ theme }) => theme.fontSize.regular};
-
-    &:focus {
-      color: ${({ theme }) => theme.color.scienceBlue};
-    }
-
-    ${({ darkMode }) =>
-      darkMode &&
-      css`
-        &:focus {
-          color: ${({ theme }) => theme.color.dodgerBlue};
-        }
-      `};
   }
 `;
