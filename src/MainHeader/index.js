@@ -7,6 +7,7 @@ import {
   HeaderTitle,
   MyDescription,
   ContactLink,
+  MessageIcon,
 } from "./styled";
 import Button from "../Button";
 
@@ -28,8 +29,9 @@ const MainHeader = ({ darkMode }) => (
         href="mailto:michal.janiec95@gmail.com"
         target="_blank"
         rel="noreferrer noopener"
+        icon={true}
       >
-        <Button icon={true} buttonMessage={"Hire Me"} darkMode={darkMode} />
+        <MessageIcon /> Hire Me
       </ContactLink>
     </About>
   </StyledHeader>
