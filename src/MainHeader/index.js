@@ -1,4 +1,5 @@
 import React from "react";
+import { mailAddress } from "../mailAddress";
 import {
   StyledHeader,
   MyPhoto,
@@ -9,10 +10,11 @@ import {
   ContactLink,
   MessageIcon,
 } from "./styled";
+import me from "./images/Me.jpg";
 
 const MainHeader = ({ darkMode }) => (
   <StyledHeader>
-    <MyPhoto />
+    <MyPhoto src={me} />
     <About>
       <Caption darkMode={darkMode}>This is</Caption>
       <HeaderTitle darkMode={darkMode}>Michał Janiec</HeaderTitle>
@@ -25,7 +27,7 @@ const MainHeader = ({ darkMode }) => (
       </MyDescription>
       <ContactLink
         darkMode={darkMode}
-        href="mailto:michal.janiec95@gmail.com"
+        href={`mailto:${mailAddress}`}
         target="_blank"
         rel="noreferrer noopener"
         icon={true}

@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import me from "./images/Me.jpg";
 import { ReactComponent as Message } from "./images/Message.svg";
 
 export const StyledHeader = styled.header`
@@ -23,13 +22,8 @@ export const StyledHeader = styled.header`
   }
 `;
 
-export const MyPhoto = styled.div`
-  padding-top: 100%;
-  border-radius: 50%;
-  background-image: url(${me});
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+export const MyPhoto = styled.img`
+  border-radius: 100%;
 `;
 
 export const About = styled.div`
