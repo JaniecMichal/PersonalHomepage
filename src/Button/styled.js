@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { ReactComponent as Message } from "./images/Message.svg";
 
 export const StyledButton = styled.button`
   display: flex;
@@ -67,9 +66,4 @@ export const StyledButton = styled.button`
   }
 `;
 
-export const MessageIcon = styled(Message)`
-  width: 20px;
-  height: 20px;
-  color: ${({ theme }) => theme.colors.buttonLink.text};
-  margin-right: 18px;
-`;
+
