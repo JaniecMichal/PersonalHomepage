@@ -9,7 +9,6 @@ import {
   ContactLink,
   MessageIcon,
 } from "./styled";
-import Button from "../Button";
 
 const MainHeader = ({ darkMode }) => (
   <StyledHeader>

@@ -8,26 +8,30 @@ import { HeaderTitle, StyledWrapper, SubTitle, TileContainer } from "./styled";
 const Portfolio = ({ loading, error, darkMode, repositories }) => {
   const returnCorrectContent = () => {
     if (loading === true) {
-      return <Spinner darkMode={darkMode} />
+      return <Spinner darkMode={darkMode} />;
     } else if (error === true) {
-      return <ConnectionError darkMode={darkMode} />
+      return <ConnectionError darkMode={darkMode} />;
     } else {
       return (
-        <TileContainer>
-          {
-            !!repositories && repositories.filter(({ name }) => name !== "JaniecMichal").map(repository =>
-              <ProjectTile
-                darkMode={darkMode}
-                key={repository.id}
-                title={repository.name}
-                description={repository.description}
-                demoLink={repository.homepage}
-                codeLink={repository.html_url}
-              />
-            )
-          }
-        </TileContainer>
-      )
+        <>
+          <header></header>
+          <TileContainer>
+            {!!repositories &&
+              repositories
+                .filter(({ name }) => name !== "JaniecMichal")
+                .map((repository) => (
+                  <ProjectTile
+                    darkMode={darkMode}
+                    key={repository.id}
+                    title={repository.name}
+                    description={repository.description}
+                    demoLink={repository.homepage}
+                    codeLink={repository.html_url}
+                  />
+                ))}
+          </TileContainer>
+        </>
+      );
     }
   };
 
@@ -40,7 +44,7 @@ const Portfolio = ({ loading, error, darkMode, repositories }) => {
       </header>
       {returnCorrectContent()}
     </StyledWrapper>
-  )
+  );
 };
 
 export default Portfolio;
