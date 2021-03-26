@@ -19,7 +19,7 @@ const ButtonWraper = ({ darkMode, modeToggler }) => {
         <ModeText darkMode={darkMode}>Dark mode Off</ModeText>
         <ButtonBackground>
           <IconWrapper darkMode={darkMode}>
-            <Icon darkMode={darkMode} />
+            <Icon />
           </IconWrapper>
         </ButtonBackground>
       </StyledButton>
