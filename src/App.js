@@ -11,7 +11,7 @@ import ButtonWraper from "./ButtonWraper";
 import Portfolio from "./Portfolio";
 import Footer from "./Footer";
 import { GlobalStyle } from "./MainStylesAndTheme/GlobalStyle";
-import { theme } from "./MainStylesAndTheme/theme.js";
+import { lightTheme, darkTheme } from "./MainStylesAndTheme/theme.js";
 import { useApiData } from "./useApiData";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
   const appState = useApiData();
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={!darkMode ? lightTheme : darkTheme}>
       <>
         <GlobalStyle darkMode={darkMode} />
         <Container>
