@@ -1,8 +1,6 @@
 import React from "react";
-import fbIcon from "./images/facebookIcon.svg";
-import ghIcon from "./images/githubIcon.svg";
-import inIcon from "./images/instagramIcon.svg";
-import liIcon from "./images/linkedinIcon.svg";
+import { socialsData } from "./socialsData";
+import { mailAddress } from "../mailAddress";
 import {
   ContactMessage,
   Caption,
@@ -17,7 +15,7 @@ const Footer = ({ darkMode }) => (
     <Caption darkMode={darkMode}>Let's talk!</Caption>
     <ContactLink
       darkMode={darkMode}
-      href="mailto:michal.janiec95@gmail.com"
+      href={`mailto:${mailAddress}`}
       target="_blank"
       rel="noreferrer noopener"
     >
@@ -29,34 +27,22 @@ const Footer = ({ darkMode }) => (
       ideas come to life, feel free to conatct me. 🖐
     </ContactMessage>
     <SocialsContainer>
-      <a
-        href="https://github.com/JaniecMichal"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <SocialIcon src={ghIcon} alt="githubIcon" darkMode={darkMode} />
-      </a>
-      <a
-        href="https://www.facebook.com/profile.php?id=100002006529733"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <SocialIcon src={fbIcon} alt="facebookIcon" darkMode={darkMode} />
-      </a>
-      <a
-        href="https://www.instagram.com/lordmichal"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <SocialIcon src={inIcon} alt="instagramIcon" darkMode={darkMode} />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/JaniecMichal"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        <SocialIcon src={liIcon} alt="linkedinIcon" darkMode={darkMode} />
-      </a>
+      {socialsData.map((social) => {
+        return (
+          <a
+            href={social.profileLink}
+            target="_blank"
+            rel="noreferrer noopener"
+            key={social.profileLink}
+          >
+            <SocialIcon
+              src={social.socialIcon}
+              alt={social.socialName}
+              darkMode={darkMode}
+            />
+          </a>
+        );
+      })}
     </SocialsContainer>
   </StyledFooter>
 );
