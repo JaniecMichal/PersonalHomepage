@@ -18,10 +18,6 @@ export const ErrorMessage = styled.p`
   font-weight:${({ theme }) => theme.fontWeight.bold};
   font-size:${({ theme }) => theme.fontSize.xlarge};
 
-  ${({ darkMode }) => darkMode && css`
-    color:${({ theme }) => theme.color.white};
-  `};
-
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     margin-top:12px;
     font-size:${({ theme }) => theme.fontSize.normal};
@@ -33,10 +29,6 @@ export const ErrorTip = styled.p`
   margin-bottom:44px;
   font-weight:${({ theme }) => theme.fontWeight.normal};
   font-size:${({ theme }) => theme.fontSize.large};
-
-  ${({ darkMode }) => darkMode && css`
-    color:${({ theme }) => theme.color.white};
-  `};
 
   @media (max-width: ${({ theme }) => theme.media.extraMobile}) {
     margin-top:16px;
@@ -53,8 +45,4 @@ export const StyledImg = styled.img`
 
 export const StyledLink = styled.a`
   text-decoration:none;
-
-  &:visited{
-    color:${({ theme }) => theme.color.white};
-  }
 `;
