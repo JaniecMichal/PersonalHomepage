@@ -5,7 +5,7 @@ const skillset = [
   "CSS BEM convention",
   "CSS Grid",
   "CSS Flexbox",
-  "JavaScript: ES6+",
+  "JavaScript ES6+",
   "Promises, Async/Await",
   "Error handling",
   "Working with API (fetch, axios)",
