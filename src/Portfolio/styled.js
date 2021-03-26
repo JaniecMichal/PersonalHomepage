@@ -13,6 +13,7 @@ export const StyledWrapper = styled.section`
 export const HeaderTitle = styled.h3`
   font-weight:${({ theme }) => theme.fontWeight.black};
   font-size:${({ theme }) => theme.fontSize.xxlarge};
+  color: ${({ theme }) => theme.colors.textPrimary};
   margin-top:12px;
   margin-bottom:8px;
 
@@ -31,7 +32,7 @@ export const SubTitle = styled.p`
 export const TileContainer = styled.section`
   width:100%;
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items:center;
   grid-gap:32px;
 
