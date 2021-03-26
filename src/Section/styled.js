@@ -75,6 +75,7 @@ export const Skill = styled.li`
   align-items: center;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  margin-bottom: 8px;
 `;
 
 export const Circle = styled.div`
